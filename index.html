@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كوتش محمد أحمد | التدريب الشخصي وتصميم الفورمة</title>
+    
+    <!-- Google Fonts (Cairo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        zinc: {
+                            850: '#1f1f23',
+                            950: '#09090b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f3f46;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col antialiased">
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#home" class="flex items-center gap-2 text-white font-black text-xl md:text-2xl tracking-wider select-none">
+                <i data-lucide="dumbbell" class="h-6 w-6 md:h-7 md:w-7 text-lime-400 transform -rotate-45"></i>
+                <span>COACH<span class="text-lime-400">.</span>MOHAMED</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-8">
+                <ul class="flex items-center gap-8 list-none m-0 p-0">
+                    <li><a href="#home" class="text-sm font-semibold text-zinc-300 hover:text-lime-400 transition-colors duration-200">الرئيسية</a></li>
+                    <li><a href="#about" class="text-sm font-semibold text-zinc-300 hover:text-lime-400 transition-colors duration-200">من أنا</a></li>
+                    <li><a href="#programs" class="text-sm font-semibold text-zinc-300 hover:text-lime-400 transition-colors duration-200">البرامج التدريبية</a></li>
+                    <li><a href="#bmi" class="text-sm font-semibold text-zinc-300 hover:text-lime-400 transition-colors duration-200">احسب وزنك المثالي</a></li>
+                    <li><a href="#testimonials" class="text-sm font-semibold text-zinc-300 hover:text-lime-400 transition-colors duration-200">قصص النجاح</a></li>
+                    <li><a href="#faq" class="text-sm font-semibold text-zinc-300 hover:text-lime-400 transition-colors duration-200">الأسئلة الشائعة</a></li>
+                    <li><a href="#contact" class="text-sm font-semibold text-zinc-300 hover:text-lime-400 transition-colors duration-200">تواصل معي</a></li>
+                </ul>
+                <a href="https://wa.me/201024960221?text=مرحباً كوتش محمد أحمد، أريد الاستفسار عن برامج التدريب المتاحة والاشتراك."
+                   target="_blank" rel="noopener noreferrer"
+                   class="flex items-center gap-2 bg-lime-400 hover:bg-lime-500 text-black font-extrabold px-5 py-2 rounded-lg transition-all duration-300 shadow-md hover:scale-105">
+                    <i data-lucide="message-circle" class="h-4 w-4"></i>
+                    <span>اشتراك الآن</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-1.5 hover:bg-zinc-900 rounded-md transition-colors">
+                <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-zinc-950 border-b border-zinc-800 transition-all duration-300">
+            <ul class="flex flex-col p-6 gap-4 list-none m-0 text-right">
+                <li><a href="#home" class="mobile-nav-link block text-lg font-medium text-zinc-300 hover:text-lime-400 py-2 border-b border-zinc-900">الرئيسية</a></li>
+                <li><a href="#about" class="mobile-nav-link block text-lg font-medium text-zinc-300 hover:text-lime-400 py-2 border-b border-zinc-900">من أنا</a></li>
+                <li><a href="#programs" class="mobile-nav-link block text-lg font-medium text-zinc-300 hover:text-lime-400 py-2 border-b border-zinc-900">البرامج التدريبية</a></li>
+                <li><a href="#bmi" class="mobile-nav-link block text-lg font-medium text-zinc-300 hover:text-lime-400 py-2 border-b border-zinc-900">احسب وزنك المثالي</a></li>
+                <li><a href="#testimonials" class="mobile-nav-link block text-lg font-medium text-zinc-300 hover:text-lime-400 py-2 border-b border-zinc-900">قصص النجاح</a></li>
+                <li><a href="#faq" class="mobile-nav-link block text-lg font-medium text-zinc-300 hover:text-lime-400 py-2 border-b border-zinc-900">الأسئلة الشائعة</a></li>
+                <li><a href="#contact" class="mobile-nav-link block text-lg font-medium text-zinc-300 hover:text-lime-400 py-2 border-b border-zinc-900">تواصل معي</a></li>
+                <li class="pt-2">
+                    <a href="https://wa.me/201024960221?text=مرحباً كوتش محمد أحمد، أريد الاستفسار عن برامج التدريب المتاحة والاشتراك."
+                       target="_blank" rel="noopener noreferrer"
+                       class="flex justify-center items-center gap-2 bg-lime-400 text-black font-bold py-3 rounded-xl w-full text-center">
+                        <i data-lucide="message-circle" class="h-5 w-5"></i>
+                        <span>ابدأ رحلتك اليوم</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-28 pb-12 px-4 sm:px-6 lg:px-8 bg-zinc-950 overflow-hidden">
+        <div class="absolute top-[-10%] right-[-10%] w-[300px] sm:w-[550px] h-[300px] sm:h-[550px] bg-lime-500/10 rounded-full blur-[90px] pointer-events-none"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-emerald-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <!-- Hero Text -->
+            <div class="lg:col-span-7 flex flex-col items-start text-right w-full order-last lg:order-first">
+                <div class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-800 text-lime-400 text-sm font-semibold px-4 py-2 rounded-full mb-6 shadow-sm self-start">
+                    <i data-lucide="sparkles" class="h-4 w-4"></i>
+                    <span>نظام تدريب مبني على العلم، مصمم لك أنت</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black text-white leading-tight tracking-tight mb-6 text-right w-full">
+                    ابنِ فورمة أحلامك بأسلوب علمي وواقعي
+                </h1>
+                <p class="text-zinc-400 text-base sm:text-lg lg:text-xl leading-relaxed mb-8 max-w-2xl text-right w-full">
+                    بدون حرمان، بدون تمارين غير مجدية. خطط تدريب وتغذية مصممة خصيصاً لجسمك وأسلوب حياتك مع متابعة يومية للوصول لأفضل نسخة منك مع الكوتش محمد أحمد.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                    <a href="#programs" class="bg-lime-400 hover:bg-lime-500 text-black font-extrabold text-lg px-8 py-4 rounded-xl text-center transition-all duration-300 shadow-lg shadow-lime-400/20 hover:scale-[1.02] flex items-center justify-center gap-2">
+                        اكتشف باقات التدريب
+                    </a>
+                    <a href="#bmi" class="bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 text-white font-semibold text-lg px-8 py-4 rounded-xl text-center transition-all duration-300 flex items-center justify-center gap-2">
+                        احسب مؤشر كتلة جسمك مجاناً
+                    </a>
+                </div>
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-6 mt-12 w-full max-w-md border-t border-zinc-900 pt-8 text-right">
+                    <div>
+                        <div class="text-3xl font-extrabold text-lime-400">6+</div>
+                        <div class="text-xs sm:text-sm text-zinc-500 font-medium mt-1">سنوات الخبرة</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-lime-400">500+</div>
+                        <div class="text-xs sm:text-sm text-zinc-500 font-medium mt-1">قصة نجاح حقيقية</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-lime-400">100%</div>
+                        <div class="text-xs sm:text-sm text-zinc-500 font-medium mt-1">خطط مخصصة</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="lg:col-span-5 flex justify-center items-center w-full">
+                <div class="relative w-full max-w-[380px] aspect-[4/5] rounded-3xl overflow-hidden border-2 border-zinc-850 bg-zinc-900 shadow-2xl">
+                    <img src="hero.jpg" alt="Coach profile" class="w-full h-full object-cover object-center">
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce hidden lg:block">
+            <a href="#about" class="text-zinc-650 hover:text-lime-400 transition-colors">
+                <i data-lucide="arrow-down" class="h-6 w-6"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-zinc-900 bg-zinc-950/40 relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Image -->
+            <div class="lg:col-span-5 flex justify-center order-last lg:order-first">
+                <div class="relative w-full max-w-[380px] aspect-[4/5] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-lg">
+                    <img src="about.jpg" alt="Coach training action" class="w-full h-full object-cover object-center">
+                </div>
+            </div>
+
+            <!-- Text Content -->
+            <div class="lg:col-span-7 text-right">
+                <span class="text-lime-400 font-bold text-sm tracking-wider uppercase">من هو الكوتش؟</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-6">رحلتي في عالم اللياقة والتغيير</h2>
+                <p class="text-zinc-400 text-base sm:text-lg leading-relaxed mb-8">
+                    أنا كوتش محمد أحمد، مدرب شخصي وأخصائي تغذية معتمد في المنيا. أؤمن بأن الوصول للجسم المثالي لا يتطلب الحرمان القاسي أو قضاء ساعات طويلة غير مجدية في الجيم. أهدافي هي مساعدتك على فهم جسمك وتطوير عادات صحية تدوم مدى الحياة لتحقيق نتائج حقيقية ومستمرة.
+                </p>
+
+                <!-- Certifications Card -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-24 h-24 bg-lime-400/5 rounded-br-full pointer-events-none"></div>
+                    <h3 class="text-lg font-bold text-white mb-6 flex items-center justify-end gap-2">
+                        <span>الشهادات والاعتمادات الرسمية</span>
+                        <i data-lucide="award" class="h-5 w-5 text-lime-400"></i>
+                    </h3>
+                    <ul class="space-y-4 list-none p-0 m-0">
+                        <li class="flex items-start gap-3 flex-row-reverse text-right">
+                            <span class="w-1.5 h-1.5 rounded-full bg-lime-400 mt-2.5 shrink-0"></span>
+                            <span class="text-zinc-300 font-medium text-sm sm:text-base">شهادة تدريب شخصي معتمدة دولياً (Certified Personal Trainer)</span>
+                        </li>
+                        <li class="flex items-start gap-3 flex-row-reverse text-right">
+                            <span class="w-1.5 h-1.5 rounded-full bg-lime-400 mt-2.5 shrink-0"></span>
+                            <span class="text-zinc-300 font-medium text-sm sm:text-base">أخصائي تغذية رياضية معتمد (Certified Sports Nutritionist)</span>
+                        </li>
+                        <li class="flex items-start gap-3 flex-row-reverse text-right">
+                            <span class="w-1.5 h-1.5 rounded-full bg-lime-400 mt-2.5 shrink-0"></span>
+                            <span class="text-zinc-300 font-medium text-sm sm:text-base">دبلوم تخطيط الأحمال التدريبية وتصميم البرامج الرياضية</span>
+                        </li>
+                        <li class="flex items-start gap-3 flex-row-reverse text-right">
+                            <span class="w-1.5 h-1.5 rounded-full bg-lime-400 mt-2.5 shrink-0"></span>
+                            <span class="text-zinc-300 font-medium text-sm sm:text-base">خبرة أكثر من 6 سنوات في تحويل الأجسام وتدريب الرياضيين أونلاين</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMS SECTION -->
+    <section id="programs" class="py-24 px-4 sm:px-6 lg:px-8 bg-zinc-950 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-lime-400 font-bold text-sm tracking-wider uppercase">باقات الاشتراك</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">اختر خطتك وابدأ التحول</h2>
+                <p class="text-zinc-400">باقات مصممة لتلائم كافة الاحتياجات مع مستويات متعددة من المتابعة الشخصية اليومية.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                <!-- Program 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative transition-all duration-300 hover:border-zinc-700">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="text-lime-400 font-bold text-xs bg-lime-400/10 px-3 py-1 rounded-full">3 أشهر</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 text-right">برنامج التحول الكامل (التدريب والتغذية المخصصة)</h3>
+                        <div class="text-right mb-6">
+                            <span class="text-3xl font-black text-white">1200 ج.م</span>
+                        </div>
+                        <p class="text-zinc-450 text-sm text-right leading-relaxed mb-6">
+                            برنامج متكامل صمم خصيصاً لهدفك الشخصي سواء خسارة الدهون أو بناء العضلات مع متابعة مستمرة.
+                        </p>
+                        <ul class="space-y-3.5 list-none p-0 m-0 border-t border-zinc-800 pt-6">
+                            <li class="flex items-center gap-3 flex-row-reverse text-right text-zinc-300 text-sm">
+                                <i data-lucide="check" class="h-4 w-4 text-lime-400 shrink-0"></i>
+                                <span>جدول تمارين مخصص لمستواك ومكان تدريبك (جيم/منزل)</span>
+                            </li>
+                            <li class="flex items-center gap-3 flex-row-reverse text-right text-zinc-300 text-sm">
+                                <i data-lucide="check" class="h-4 w-4 text-lime-400 shrink-0"></i>
+                                <span>خطة غذائية مرنة محسوبة السعرات والماكروز</span>
+                            </li>
+                            <li class="flex items-center gap-3 flex-row-reverse text-right text-zinc-300 text-sm">
+                                <i data-lucide="check" class="h-4 w-4 text-lime-400 shrink-0"></i>
+                                <span>تحديث وتعديل دوري للخطط بناءً على تطور جسمك</span>
+                            </li>
+                            <li class="flex items-center gap-3 flex-row-reverse text-right text-zinc-300 text-sm">
+                                <i data-lucide="check" class="h-4 w-4 text-lime-400 shrink-0"></i>
+                                <span>متابعة أسبوعية عبر الواتساب للإجابة على استفساراتك</span>
+                            </li>
+                            <li class="flex items-center gap-3 flex-row-reverse text-right text-zinc-300 text-sm">
+                                <i data-lucide="check" class="h-4 w-4 text-lime-400 shrink-0"></i>
+                                <span>ملف نصائح ومكملات مقترحة</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <a href="https://wa.me/201024960221?text=مرحباً كوتش محمد أحمد، أود الاستفسار عن تفاصيل والاشتراك في: برنامج التحول الكامل (3 أشهر)."
+                           target="_blank" rel="noopener noreferrer"
+                           class="block w-full bg-zinc-950 hover:bg-zinc-800 border border-zinc-800 text-white font-extrabold py-3.5 rounded-xl text-center transition-all duration-300">
+                            اشترك الآن
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Program 2 (Popular) -->
+                <div class="bg-zinc-900 border-2 border-lime-400 rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative transition-all duration-300 shadow-xl shadow-lime-400/5">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-lime-400 text-black font-extrabold text-[10px] sm:text-xs px-4 py-1 rounded-full uppercase tracking-wider shadow-md">
+                        الأكثر مبيعاً ⚡
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="text-lime-400 font-bold text-xs bg-lime-400/10 px-3 py-1 rounded-full">6 أشهر</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 text-right">باقة الـ VIP الفضية (تدريب + تغذية + اتصال مباشر)</h3>
+                        <div class="text-right mb-6">
+                            <span class="text-3xl font-black text-lime-400">2200 ج.م</span>
+                        </div>
+                        <p class="text-zinc-450 text-sm text-right leading-relaxed mb-6">
+                            الباقة الأكثر مبيعاً للملتزمين بالوصول لأقصى إمكانياتهم مع دعم متواصل وتعديلات فورية.
+                        </p>
+                        <ul class="space-y-3.5 list-none p-0 m-0 border-t border-zinc-850 pt-6">
+                            <li class="flex items-center gap-3 flex-row-reverse text-right text-zinc-200 text-sm">
+                                <i data-lucide="check" class="h-4 w-4 text-lime-400 shrink-0"></i>
+                                <span>كل ميزات البرنامج الكامل لـ 6 أشهر</span>
+                            </li>
+                            <li class="flex items-center gap-3 flex-row-reverse text-right text-zinc-200 text-sm">
+                                <i data-lucide="check" class="h-4 w-4 text-lime-400 shrink-0"></i>
+                                <span>اتصال هاتفي شهري لتقييم الأداء وتعديل الأهداف</span>
+                            </li>
+                            <li class="flex items-center gap-3 flex-row-reverse text-right text-zinc-200 text-sm">
+                                <i data-lucide="check" class="h-4 w-4 text-lime-400 shrink-0"></i>
+                                <span>متابعة يومية عبر الواتساب والرد على الأسئلة خلال ساعات</span>
+                            </li>
+                            <li class="flex items-center gap-3 flex-row-reverse text-right text-zinc-200 text-sm">
+                                <i data-lucide="check" class="h-4 w-4 text-lime-400 shrink-0"></i>
+                                <span>تحليل ومراجعة تكنيك التمارين بالفيديو للتأكد من سلامة الأداء</span>
+                            </li>
+                            <li class="flex items-center gap-3 flex-row-reverse text-right text-zinc-200 text-sm">
+                                <i data-lucide="check" class="h-4 w-4 text-lime-400 shrink-0"></i>
+                                <span>خصم خاص عند التجديد</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <a href="https://wa.me/201024960221?text=مرحباً كوتش محمد أحمد، أود الاستفسار عن تفاصيل والاشتراك في: باقة الـ VIP الفضية (6 أشهر)."
+                           target="_blank" rel="noopener noreferrer"
+                           class="block w-full bg-lime-400 hover:bg-lime-500 text-black font-extrabold py-4 rounded-xl text-center transition-all duration-300 shadow-md">
+                            اشترك الآن
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative transition-all duration-300 hover:border-zinc-700">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="text-lime-400 font-bold text-xs bg-lime-400/10 px-3 py-1 rounded-full">شهر واحد</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 text-right">خطة التغذية والدايت المخصصة</h3>
+                        <div class="text-right mb-6">
+                            <span class="text-3xl font-black text-white">500 ج.م</span>
+                        </div>
+                        <p class="text-zinc-450 text-sm text-right leading-relaxed mb-6">
+                            إذا كنت تمارس الرياضة بالفعل ولكنك تحتاج لنظام غذائي علمي ومرن يوصلك لهدفك بسرعة.
+                        </p>
+                        <ul class="space-y-3.5 list-none p-0 m-0 border-t border-zinc-800 pt-6">
+                            <li class="flex items-center gap-3 flex-row-reverse text-right text-zinc-300 text-sm">
+                                <i data-lucide="check" class="h-4 w-4 text-lime-400 shrink-0"></i>
+                                <span>نظام غذائي مصمم حسب الأكلات المفضلة لديك</span>
+                            </li>
+                            <li class="flex items-center gap-3 flex-row-reverse text-right text-zinc-300 text-sm">
+                                <i data-lucide="check" class="h-4 w-4 text-lime-400 shrink-0"></i>
+                                <span>حساب دقيق للسعرات والبروتين والكربوهيدرات والدهون</span>
+                            </li>
+                            <li class="flex items-center gap-3 flex-row-reverse text-right text-zinc-300 text-sm">
+                                <i data-lucide="check" class="h-4 w-4 text-lime-400 shrink-0"></i>
+                                <span>بدائل مرنة للأطعمة لتجنب الملل والاستمرار بسهولة</span>
+                            </li>
+                            <li class="flex items-center gap-3 flex-row-reverse text-right text-zinc-300 text-sm">
+                                <i data-lucide="check" class="h-4 w-4 text-lime-400 shrink-0"></i>
+                                <span>متابعة وزن وقياسات كل أسبوعين وتعديل النظام</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <a href="https://wa.me/201024960221?text=مرحباً كوتش محمد أحمد، أود الاستفسار عن تفاصيل والاشتراك في: خطة التغذية والدايت المخصصة (شهر واحد)."
+                           target="_blank" rel="noopener noreferrer"
+                           class="block w-full bg-zinc-950 hover:bg-zinc-800 border border-zinc-800 text-white font-extrabold py-3.5 rounded-xl text-center transition-all duration-300">
+                            اشترك الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BMI CALCULATOR SECTION -->
+    <section id="bmi" class="py-24 px-4 sm:px-6 lg:px-8 bg-zinc-900/40 border-t border-zinc-900 relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-lime-400 font-bold text-sm tracking-wider uppercase">حاسبة السعرات الذكية</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">احسب احتياج جسمك العلمي مجاناً</h2>
+                <p class="text-zinc-400">احصل على قراءة فورية لمؤشر كتلة جسمك، ومعدل الحرق الأساسي، وتقسيم الماكروز المناسب لهدفك.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <!-- Calculator Inputs -->
+                <div class="md:col-span-6 bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8">
+                    <form id="calculator-form" class="space-y-4 text-right">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-400 mb-1.5">الوزن (كجم)</label>
+                                <input type="number" id="calc-weight" required min="30" max="250" placeholder="مثال: 75" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder-zinc-700 focus:outline-none focus:border-lime-400">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-400 mb-1.5">الطول (سم)</label>
+                                <input type="number" id="calc-height" required min="100" max="250" placeholder="مثال: 175" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder-zinc-700 focus:outline-none focus:border-lime-400">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-400 mb-1.5">العمر (سنوات)</label>
+                                <input type="number" id="calc-age" required min="12" max="80" placeholder="مثال: 25" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder-zinc-700 focus:outline-none focus:border-lime-400">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-400 mb-1.5">الجنس</label>
+                                <select id="calc-gender" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-lime-400 text-right">
+                                    <option value="male">ذكر</option>
+                                    <option value="female">أنثى</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-zinc-400 mb-1.5">معدل النشاط البدني اليومي</label>
+                            <select id="calc-activity" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-lime-400 text-right">
+                                <option value="1.2">خامل (عمل مكتبي، بدون تمارين)</option>
+                                <option value="1.375">نشاط خفيف (تمارين خفيفة 1-3 أيام أسبوعياً)</option>
+                                <option value="1.55">نشاط متوسط (تمارين متوسطة القوة 3-5 أيام أسبوعياً)</option>
+                                <option value="1.725">نشاط عالٍ جداً (تمارين قاسية 6-7 أيام أسبوعياً)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-zinc-400 mb-1.5">هدفك الأساسي</label>
+                            <select id="calc-goal" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-lime-400 text-right">
+                                <option value="lose">خسارة دهون وتنشيف الجسم</option>
+                                <option value="maintain">المحافظة على الوزن الحالي</option>
+                                <option value="gain">زيادة الكتلة العضلية والضخامة</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full bg-lime-400 hover:bg-lime-500 text-black font-extrabold py-3.5 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer mt-2 shadow-lg shadow-lime-400/10">
+                            <i data-lucide="calculator" class="h-4 w-4"></i>
+                            <span>احسب النتائج فوراً</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Calculator Outputs -->
+                <div class="md:col-span-6 flex flex-col justify-center items-center h-full">
+                    <div id="calc-placeholder" class="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-8 text-center max-w-sm w-full flex flex-col items-center justify-center min-h-[350px]">
+                        <div class="w-16 h-16 rounded-2xl bg-zinc-850 flex items-center justify-center mb-4 text-zinc-600">
+                            <i data-lucide="trending-up" class="h-8 w-8"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-lg mb-2">أدخل بياناتك بالجانب المقابل</h4>
+                        <p class="text-zinc-500 text-sm max-w-[280px]">سنقوم بحساب مؤشر كتلة جسمك وسعرات التنشيف أو التضخيم أوتوماتيكياً وعرض الماكروز المناسبة لك.</p>
+                    </div>
+
+                    <div id="calc-results" class="hidden bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 w-full text-right space-y-6">
+                        <h3 class="text-xl font-bold text-white border-b border-zinc-800 pb-4">نتائج التحليل العلمي الخاص بك</h3>
+                        
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="bg-zinc-950 border border-zinc-850 p-4 rounded-2xl text-center">
+                                <span class="block text-[10px] text-zinc-500 font-bold mb-1">كتلة الجسم BMI</span>
+                                <span id="res-bmi" class="text-xl font-black text-white">-</span>
+                                <span id="res-bmi-status" class="block text-[10px] text-zinc-400 font-semibold mt-1">-</span>
+                            </div>
+                            <div class="bg-zinc-950 border border-zinc-850 p-4 rounded-2xl text-center">
+                                <span class="block text-[10px] text-zinc-500 font-bold mb-1">معدل الأيض BMR</span>
+                                <span id="res-bmr" class="text-xl font-black text-white">-</span>
+                                <span class="block text-[10px] text-zinc-500 font-semibold mt-1">سعرة حرارية</span>
+                            </div>
+                            <div class="bg-zinc-950 border border-zinc-850 p-4 rounded-2xl text-center">
+                                <span class="block text-[10px] text-zinc-500 font-bold mb-1">سعرات الهدف TDEE</span>
+                                <span id="res-tdee" class="text-xl font-black text-lime-400">-</span>
+                                <span class="block text-[10px] text-lime-400/50 font-semibold mt-1">سعرة للتغيير</span>
+                            </div>
+                        </div>
+
+                        <!-- Macro distribution -->
+                        <div class="space-y-3.5 border-t border-zinc-800 pt-6">
+                            <h4 class="text-sm font-bold text-zinc-350">توزيع العناصر الغذائية اليومية (الماكروز):</h4>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-zinc-950/60 p-3 rounded-xl border border-zinc-850">
+                                    <span class="block text-[10px] text-zinc-550 font-bold mb-1">البروتين</span>
+                                    <span id="macro-protein" class="text-base font-bold text-white">-</span>
+                                </div>
+                                <div class="bg-zinc-950/60 p-3 rounded-xl border border-zinc-850">
+                                    <span class="block text-[10px] text-zinc-550 font-bold mb-1">الدهون الصحية</span>
+                                    <span id="macro-fats" class="text-base font-bold text-white">-</span>
+                                </div>
+                                <div class="bg-zinc-950/60 p-3 rounded-xl border border-zinc-850">
+                                    <span class="block text-[10px] text-zinc-550 font-bold mb-1">الكربوهيدرات</span>
+                                    <span id="macro-carbs" class="text-base font-bold text-white">-</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <a id="whatsapp-calc-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold py-3.5 rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="h-5 w-5"></i>
+                                <span>أرسل النتائج للكوتش وصمم نظامك الآن</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="py-24 px-4 sm:px-6 lg:px-8 bg-zinc-950 border-t border-zinc-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-lime-400 font-bold text-sm tracking-wider uppercase">قصص نجاح واقعية</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">النتائج تتحدث عن نفسها</h2>
+                <p class="text-zinc-400">أبطال تغلبوا على العقبات وحققوا أهدافهم من خلال الالتزام بالنظام المصمم خصيصاً لهم.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Draggable Slider Container -->
+                <div class="lg:col-span-6 flex flex-col items-center">
+                    <h3 class="text-lg font-bold text-zinc-300 mb-4 text-center">اسحب الشريط لمشاهدة الفرق</h3>
+                    
+                    <div id="slider-box" class="relative w-full max-w-[420px] aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 cursor-ew-resize select-none">
+                        
+                        <!-- After state (Base) -->
+                        <div id="slider-after-bg" class="absolute inset-0 bg-gradient-to-br from-zinc-900 to-lime-950/40 flex flex-col justify-center items-center p-8">
+                            <div class="flex flex-col items-center translate-x-[60px]">
+                                <span id="slider-after-icon" class="text-7xl mb-2 drop-shadow-md">⚡</span>
+                                <span id="slider-after-label" class="bg-lime-400 text-black text-xs font-black px-3 py-1 rounded-full uppercase mb-1">بعد: 81 كجم</span>
+                                <span class="text-white text-xs font-semibold">بعد التحول</span>
+                            </div>
+                        </div>
+
+                        <!-- Before state (Clipped Overlay) -->
+                        <div id="slider-before-bg" class="absolute inset-0 bg-gradient-to-br from-zinc-900 to-red-950/40 flex flex-col justify-center items-center p-8" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                            <div class="flex flex-col items-center -translate-x-[60px]">
+                                <span id="slider-before-icon" class="text-7xl mb-2 drop-shadow-md">🏋️‍♂️</span>
+                                <span id="slider-before-label" class="bg-zinc-800 text-white text-xs font-black px-3 py-1 rounded-full uppercase mb-1">قبل: 95 كجم</span>
+                                <span class="text-zinc-400 text-xs font-semibold">قبل البداية</span>
+                            </div>
+                        </div>
+
+                        <!-- Slider Line -->
+                        <div id="slider-bar" class="absolute top-0 bottom-0 w-0.5 bg-white/60 pointer-events-none z-30" style="left: 50%;">
+                            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-lime-400 border-4 border-zinc-950 flex items-center justify-center shadow-lg">
+                                <span class="text-[10px] text-black font-black">↔</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story Switcher Buttons -->
+                    <div class="flex gap-2 mt-6">
+                        <button onclick="switchStory(0)" id="btn-story-0" class="w-6 h-3 rounded-full bg-lime-400 transition-all" aria-label="القصة 1"></button>
+                        <button onclick="switchStory(1)" id="btn-story-1" class="w-3 h-3 rounded-full bg-zinc-700 hover:bg-zinc-600 transition-all" aria-label="القصة 2"></button>
+                    </div>
+                </div>
+
+                <!-- Text review -->
+                <div class="lg:col-span-6 text-right flex flex-col justify-center">
+                    <i data-lucide="quote" class="h-12 w-12 text-lime-400 opacity-20 mb-4 self-end"></i>
+                    <div class="mb-2">
+                        <span id="story-duration" class="text-lime-400 font-bold text-xs bg-lime-400/10 px-3 py-1 rounded-full">12 أسبوع</span>
+                    </div>
+                    <h3 id="story-name" class="text-2xl font-black text-white mb-2">عبد الله صالح</h3>
+                    <p id="story-achievement" class="text-zinc-400 text-sm font-semibold mb-6">خسارة 14 كجم دهون ونحت الجسم</p>
+                    
+                    <blockquote id="story-text" class="text-zinc-350 text-lg leading-relaxed italic mb-8 border-r-4 border-lime-400 pr-6">
+                        "الالتزام مع الكوتش كان أفضل قرار أخذته في حياتي. النظام الغذائي مرن جداً وغير مقيد، والتمارين كانت ممتعة وموجهة بشكل ممتاز ومصممة لمستواي المبتدئ."
+                    </blockquote>
+
+                    <div class="flex gap-4 flex-row-reverse">
+                        <div class="bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-2.5 text-center">
+                            <span class="block text-xs text-zinc-500">معدل الالتزام</span>
+                            <span class="text-lg font-bold text-white">98%</span>
+                        </div>
+                        <div class="bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-2.5 text-center">
+                            <span class="block text-xs text-zinc-500">خطة التغذية</span>
+                            <span class="text-lg font-bold text-white">مرنة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-24 px-4 sm:px-6 lg:px-8 bg-zinc-950 border-t border-zinc-900">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-lime-400 font-bold text-sm tracking-wider uppercase">الأسئلة الشائعة</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">لديك استفسار؟ إليك الإجابة</h2>
+                <p class="text-zinc-400">أهم الأسئلة التي يطرحها المشتركون قبل البدء في رحلة التحول الرياضي.</p>
+            </div>
+
+            <div class="space-y-4 text-right">
+                <!-- FAQ Item 1 -->
+                <div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFaq(0)" class="w-full flex items-center justify-between p-5 sm:p-6 text-right focus:outline-none gap-4 flex-row-reverse">
+                        <div class="flex items-center gap-3 flex-row-reverse">
+                            <div id="faq-icon-0" class="p-2 rounded-xl transition-colors bg-zinc-800 text-zinc-400">
+                                <i data-lucide="help-circle" class="h-5 w-5"></i>
+                            </div>
+                            <span class="text-white font-bold text-base sm:text-lg">هل التدريب والمتابعة أونلاين مناسب للمبتدئين؟</span>
+                        </div>
+                        <i data-lucide="chevron-down" id="faq-arrow-0" class="h-5 w-5 text-zinc-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div id="faq-content-0" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0">
+                        <div class="p-5 sm:p-6 text-zinc-400 text-sm sm:text-base leading-relaxed bg-zinc-950/20 pr-14 border-t border-zinc-850">
+                            بالطبع! التدريب أونلاين مصمم خصيصاً ليناسب جميع المستويات. إذا كنت مبتدئاً، سأقوم بشرح التمارين لك بالفيديو خطوة بخطوة مع التأكيد على الأداء الحركي الصحيح لضمان سلامتك وتجنب الإصابات.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFaq(1)" class="w-full flex items-center justify-between p-5 sm:p-6 text-right focus:outline-none gap-4 flex-row-reverse">
+                        <div class="flex items-center gap-3 flex-row-reverse">
+                            <div id="faq-icon-1" class="p-2 rounded-xl transition-colors bg-zinc-800 text-zinc-400">
+                                <i data-lucide="help-circle" class="h-5 w-5"></i>
+                            </div>
+                            <span class="text-white font-bold text-base sm:text-lg">كيف تتم المتابعة اليومية وتعديل الخطط؟</span>
+                        </div>
+                        <i data-lucide="chevron-down" id="faq-arrow-1" class="h-5 w-5 text-zinc-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div id="faq-content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0">
+                        <div class="p-5 sm:p-6 text-zinc-400 text-sm sm:text-base leading-relaxed bg-zinc-950/20 pr-14 border-t border-zinc-850">
+                            المتابعة تكون مباشرة عبر الواتساب. ستقوم بإرسال أوزانك وقياساتك أسبوعياً، وبناءً على التطور الحاصل نقوم بتعديل خطة التغذية وجدول التمارين. كما يمكنك إرسال فيديوهات لتمارينك لمراجعة الأداء وتصحيح التكنيك في أي وقت.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFaq(2)" class="w-full flex items-center justify-between p-5 sm:p-6 text-right focus:outline-none gap-4 flex-row-reverse">
+                        <div class="flex items-center gap-3 flex-row-reverse">
+                            <div id="faq-icon-2" class="p-2 rounded-xl transition-colors bg-zinc-800 text-zinc-400">
+                                <i data-lucide="help-circle" class="h-5 w-5"></i>
+                            </div>
+                            <span class="text-white font-bold text-base sm:text-lg">هل يلزمني شراء مكملات غذائية مكلفة للوصول لنتائج؟</span>
+                        </div>
+                        <i data-lucide="chevron-down" id="faq-arrow-2" class="h-5 w-5 text-zinc-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div id="faq-content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0">
+                        <div class="p-5 sm:p-6 text-zinc-400 text-sm sm:text-base leading-relaxed bg-zinc-950/20 pr-14 border-t border-zinc-850">
+                            لا، المكملات ليست اختياراً إجبارياً على الإطلاق. نعتمد بشكل رئيسي على نظام غذائي متكامل من الأكل الطبيعي المتوفر في بيتك. المكملات نلجأ إليها كعامل مساعد ومكمل فقط إذا دعت الحاجة وبما يتناسب مع ميزانيتك.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button onclick="toggleFaq(3)" class="w-full flex items-center justify-between p-5 sm:p-6 text-right focus:outline-none gap-4 flex-row-reverse">
+                        <div class="flex items-center gap-3 flex-row-reverse">
+                            <div id="faq-icon-3" class="p-2 rounded-xl transition-colors bg-zinc-800 text-zinc-400">
+                                <i data-lucide="help-circle" class="h-5 w-5"></i>
+                            </div>
+                            <span class="text-white font-bold text-base sm:text-lg">هل نظام الدايت مرن أم يحتوي على حرمان من الأكلات المفضلة؟</span>
+                        </div>
+                        <i data-lucide="chevron-down" id="faq-arrow-3" class="h-5 w-5 text-zinc-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div id="faq-content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0">
+                        <div class="p-5 sm:p-6 text-zinc-400 text-sm sm:text-base leading-relaxed bg-zinc-950/20 pr-14 border-t border-zinc-850">
+                            نظام الدايت الذي أصممه مرن 100% ويعتمد على حساب السعرات والماكروز. هذا يعني أنه يمكنك إدخال أكلاتك المفضلة ضمن السعرات المحددة لك، دون حرمان قاسٍ أو ملل من تكرار الوجبات.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 bg-zinc-950/60 border-t border-zinc-900 relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-stretch">
+                <!-- Info -->
+                <div class="md:col-span-5 text-right flex flex-col justify-between">
+                    <div>
+                        <span class="text-lime-400 font-bold text-sm tracking-wider uppercase">ابدأ التحول الآن</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-6">دعنا نحقق أهدافك معاً</h2>
+                        <p class="text-zinc-400 mb-8 leading-relaxed">
+                            هل لديك أي استفسار أو ترغب في بدء رحلة التغيير فوراً؟ تواصل معي مباشرة عبر إحدى الوسائل التالية أو املأ النموذج.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <a href="https://wa.me/201024960221?text=مرحباً كوتش محمد أحمد، أريد الاستفسار عن تفاصيل التدريب والمتابعة معك." 
+                           target="_blank" rel="noopener noreferrer" 
+                           class="flex items-center gap-4 p-4 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-lime-400/40 transition-colors group flex-row-reverse">
+                            <div class="bg-lime-400/10 group-hover:bg-lime-400 text-lime-400 group-hover:text-black p-3 rounded-xl transition-all ml-3">
+                                <i data-lucide="message-circle" class="h-6 w-6"></i>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-xs text-zinc-500 font-bold">راسلني عبر الواتساب</span>
+                                <span class="text-white font-bold">01024960221</span>
+                            </div>
+                        </a>
+
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800 flex-row-reverse">
+                            <div class="bg-zinc-800 text-zinc-400 p-3 rounded-xl ml-3">
+                                <i data-lucide="mail" class="h-6 w-6"></i>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-xs text-zinc-500 font-bold">البريد الإلكتروني</span>
+                                <span class="text-white font-bold">coach.mohamed@example.com</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800 flex-row-reverse">
+                            <div class="bg-zinc-800 text-zinc-400 p-3 rounded-xl ml-3">
+                                <i data-lucide="map-pin" class="h-6 w-6"></i>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-xs text-zinc-500 font-bold">الموقع</span>
+                                <span class="text-white font-bold">المنيا، مصر (أونلاين في جميع أنحاء العالم)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="md:col-span-7 bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-lime-400/5 rounded-bl-full pointer-events-none"></div>
+                    <h3 class="text-xl font-bold text-white mb-6 text-right">أرسل استفسارك وسيتواصل معك الكوتش</h3>
+                    
+                    <form id="contact-form" class="space-y-4 text-right">
+                        <div>
+                            <label class="block text-xs font-semibold text-zinc-400 mb-1.5">الاسم الكريم</label>
+                            <input type="text" id="contact-name" required placeholder="مثال: أحمد محمد" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder-zinc-700 focus:outline-none focus:border-lime-400">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-zinc-400 mb-1.5">رقم الجوال / الواتساب</label>
+                            <input type="tel" id="contact-phone" required placeholder="مثال: 010xxxxxxxx" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder-zinc-700 focus:outline-none focus:border-lime-400 text-left" dir="ltr">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-zinc-400 mb-1.5">الباقة المهتم بها</label>
+                            <select id="contact-program" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-lime-400 text-right font-semibold">
+                                <option value="general">استفسار عام / باقة مخصصة</option>
+                                <option value="برنامج التحول الكامل (3 أشهر)">برنامج التحول الكامل (1200 ج.م)</option>
+                                <option value="باقة الـ VIP الفضية (6 أشهر)">باقة الـ VIP الفضية (2200 ج.م)</option>
+                                <option value="خطة التغذية والدايت المخصصة (شهر)">خطة التغذية والدايت المخصصة (500 ج.م)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-zinc-400 mb-1.5">هدفك الرياضي الحالي</label>
+                            <textarea id="contact-goal" rows="3" required placeholder="مثال: أريد خسارة 10 كيلوغرام وبناء عضلات الذراعين والصدر" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder-zinc-700 focus:outline-none focus:border-lime-400 resize-none"></textarea>
+                        </div>
+
+                        <div class="pt-2">
+                            <button type="submit" class="w-full bg-lime-400 hover:bg-lime-500 text-black font-extrabold py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-lime-400/20">
+                                <i data-lucide="message-circle" class="h-5 w-5"></i>
+                                <span>إرسال المعلومات عبر واتساب</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Success toast overlay -->
+                    <div id="contact-success" class="hidden absolute inset-0 bg-zinc-900/95 flex flex-col items-center justify-center text-center p-6 transition-all duration-300">
+                        <div class="w-16 h-16 bg-lime-400/20 text-lime-400 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="check" class="h-8 w-8 text-lime-400"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">جاري التوجيه إلى واتساب...</h4>
+                        <p class="text-zinc-400 text-sm max-w-sm">
+                            تم تجهيز رسالتك بكل البيانات التي أدخلتها؛ سيتم فتح الواتساب لإرسالها مباشرة للكوتش محمد أحمد.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-zinc-950 border-t border-zinc-900 py-12 px-4 sm:px-6 lg:px-8 text-zinc-500 text-sm mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row-reverse justify-between items-center gap-6">
+            <div class="flex items-center gap-2 text-white font-black text-lg select-none">
+                <i data-lucide="dumbbell" class="h-5 w-5 text-lime-400 transform -rotate-45"></i>
+                <span>COACH<span className="text-lime-400">.</span>MOHAMED</span>
+            </div>
+
+            <div class="flex gap-6">
+                <a href="https://www.instagram.com/m.a.khalaff?igsi=MWhibXV3NnJmc3E5aQ==" target="_blank" rel="noopener noreferrer" class="hover:text-lime-400 transition-colors">
+                    <i data-lucide="instagram" class="h-5 w-5"></i>
+                </a>
+                <a href="https://www.facebook.com/share/19MwpsgQia/" target="_blank" rel="noopener noreferrer" class="hover:text-lime-400 transition-colors">
+                    <i data-lucide="facebook" class="h-5 w-5"></i>
+                </a>
+            </div>
+
+            <div class="text-center md:text-right">
+                <p>© 2026 كوتش محمد أحمد. جميع الحقوق محفوظة.</p>
+                <p class="text-xs text-zinc-500 mt-1">
+                    تصميم مخصص للياقة البدنية والمتابعة الفردية | Powered by <span class="text-lime-400 font-bold">Ahmed Usama</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // 1. Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Sticky Navbar behavior
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-transparent', 'py-6');
+                navbar.classList.add('bg-zinc-950/95', 'border-b', 'border-zinc-800/80', 'py-4', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-zinc-950/95', 'border-b', 'border-zinc-800/80', 'py-4', 'shadow-lg');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        // 2. BMI Calculator logic
+        const form = document.getElementById('calculator-form');
+        const placeholder = document.getElementById('calc-placeholder');
+        const results = document.getElementById('calc-results');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const w = parseFloat(document.getElementById('calc-weight').value);
+            const h = parseFloat(document.getElementById('calc-height').value);
+            const age = parseInt(document.getElementById('calc-age').value);
+            const gender = document.getElementById('calc-gender').value;
+            const activity = parseFloat(document.getElementById('calc-activity').value);
+            const goal = document.getElementById('calc-goal').value;
+
+            // Calculations
+            const heightInMeters = h / 100;
+            const bmi = w / (heightInMeters * heightInMeters);
+
+            // BMR (Mifflin-St Jeor)
+            let bmr = 0;
+            if (gender === 'male') {
+                bmr = 10 * w + 6.25 * h - 5 * age + 5;
+            } else {
+                bmr = 10 * w + 6.25 * h - 5 * age - 161;
+            }
+
+            // TDEE
+            const maintenance = bmr * activity;
+            let targetCalories = maintenance;
+            if (goal === 'lose') {
+                targetCalories = maintenance - 500;
+            } else if (goal === 'gain') {
+                targetCalories = maintenance + 400;
+            }
+
+            // Macros
+            const proteinGrams = Math.round(2.2 * w);
+            const fatGrams = Math.round(1.0 * w);
+            const proteinCals = proteinGrams * 4;
+            const fatCals = fatGrams * 9;
+            const carbGrams = Math.max(0, Math.round((targetCalories - (proteinCals + fatCals)) / 4));
+
+            // BMI Status
+            let bmiStatus = '';
+            if (bmi < 18.5) bmiStatus = 'نقص في الوزن';
+            else if (bmi >= 18.5 && bmi < 25) bmiStatus = 'وزن مثالي متناسق';
+            else if (bmi >= 25 && bmi < 30) bmiStatus = 'زيادة في الوزن';
+            else bmiStatus = 'سمنة';
+
+            // DOM Updates
+            document.getElementById('res-bmi').innerText = bmi.toFixed(1);
+            document.getElementById('res-bmi-status').innerText = bmiStatus;
+            document.getElementById('res-bmr').innerText = Math.round(bmr);
+            document.getElementById('res-tdee').innerText = Math.round(targetCalories);
+            
+            document.getElementById('macro-protein').innerText = proteinGrams + ' جرام (' + proteinCals + ' سعرة)';
+            document.getElementById('macro-fats').innerText = fatGrams + ' جرام (' + fatCals + ' سعرة)';
+            document.getElementById('macro-carbs').innerText = carbGrams + ' جرام (' + (carbGrams * 4) + ' سعرة)';
+
+            // Prepare WhatsApp link
+            const whatsappMessage = `مرحباً كوتش محمد أحمد! لقد قمت بحساب سعراتي واحتياجي على حاسبة موقعك المخصص وكانت النتائج كالتالي:
+- الطول: ${h} سم | الوزن: ${w} كجم | العمر: ${age} سنة
+- مؤشر كتلة الجسم BMI: ${bmi.toFixed(1)} (${bmiStatus})
+- الاحتياج اليومي المستهدف للتغيير (TDEE): ${Math.round(targetCalories)} سعرة
+- تقسيم الماكروز: بروتين ${proteinGrams}g | دهون ${fatGrams}g | كارب ${carbGrams}g
+- الهدف: ${goal === 'lose' ? 'خسارة دهون وتنشيف' : goal === 'gain' ? 'بناء عضلات وضخامة' : 'المحافظة على الوزن'}
+أريد مناقشة هذه الأرقام والبدء معك في نظام مخصص!`;
+
+            const whatsappLink = `https://wa.me/201024960221?text=${encodeURIComponent(whatsappMessage)}`;
+            document.getElementById('whatsapp-calc-btn').setAttribute('href', whatsappLink);
+
+            // Show results UI
+            placeholder.classList.add('hidden');
+            results.classList.remove('hidden');
+        });
+
+        // 3. Before/After Testimonials Slider logic
+        const sliderBox = document.getElementById('slider-box');
+        const beforeBg = document.getElementById('slider-before-bg');
+        const sliderBar = document.getElementById('slider-bar');
+
+        let isDragging = false;
+
+        function updateSlider(clientX) {
+            const rect = sliderBox.getBoundingClientRect();
+            const x = clientX - rect.left;
+            const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+            beforeBg.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+            sliderBar.style.left = `${percentage}%`;
+        }
+
+        // Mouse Events
+        sliderBox.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            updateSlider(e.clientX);
+        });
+
+        window.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        sliderBox.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            updateSlider(e.clientX);
+        });
+
+        // Touch Events (for mobile)
+        sliderBox.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            updateSlider(e.touches[0].clientX);
+        });
+
+        window.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        sliderBox.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            updateSlider(e.touches[0].clientX);
+        });
+
+        // Stories data switcher
+        const stories = [
+            {
+                name: "عبد الله صالح",
+                duration: "12 أسبوع",
+                achievement: "خسارة 14 كجم دهون ونحت الجسم",
+                beforeLabel: "قبل: 95 كجم",
+                afterLabel: "بعد: 81 كجم",
+                testimonial: "الالتزام مع الكوتش كان أفضل قرار أخذته في حياتي. النظام الغذائي مرن جداً وغير مقيد، والتمارين كانت ممتعة وموجهة بشكل ممتاز ومصممة لمستواي المبتدئ.",
+                beforeIcon: "🏋️‍♂️",
+                afterIcon: "⚡",
+                beforeGrad: "from-zinc-900 to-red-950/40",
+                afterGrad: "from-zinc-900 to-lime-950/40"
+            },
+            {
+                name: "أخلد",
+                duration: "16 أسبوع",
+                achievement: "زيادة 7 كجم كتلة عضلية صافية",
+                beforeLabel: "قبل: 68 كجم",
+                afterLabel: "بعد: 75 كجم",
+                testimonial: "كنت أعاني دائماً من صعوبة زيادة الوزن وبناء العضلات. بمتابعة دقيقة وتعديلات مستمرة على السعرات التدريبية والوجبات، حققت ما كنت أظنه مستحيلاً.",
+                beforeIcon: "🧍",
+                afterIcon: "💪",
+                beforeGrad: "from-zinc-900 to-neutral-900",
+                afterGrad: "from-zinc-900 to-emerald-950/40"
+            }
+        ];
+
+        function switchStory(index) {
+            const story = stories[index];
+            
+            // Switch active dot style
+            const btn0 = document.getElementById('btn-story-0');
+            const btn1 = document.getElementById('btn-story-1');
+            if (index === 0) {
+                btn0.className = "w-6 h-3 rounded-full bg-lime-400 transition-all";
+                btn1.className = "w-3 h-3 rounded-full bg-zinc-700 hover:bg-zinc-650 transition-all";
+            } else {
+                btn0.className = "w-3 h-3 rounded-full bg-zinc-700 hover:bg-zinc-650 transition-all";
+                btn1.className = "w-6 h-3 rounded-full bg-lime-400 transition-all";
+            }
+
+            // Update content in slider
+            document.getElementById('slider-before-label').innerText = story.beforeLabel;
+            document.getElementById('slider-after-label').innerText = story.afterLabel;
+            document.getElementById('slider-before-icon').innerText = story.beforeIcon;
+            document.getElementById('slider-after-icon').innerText = story.afterIcon;
+            
+            // Update gradients
+            const beforeBgEl = document.getElementById('slider-before-bg');
+            const afterBgEl = document.getElementById('slider-after-bg');
+            beforeBgEl.className = `absolute inset-0 bg-gradient-to-br ${story.beforeGrad} flex flex-col justify-center items-center p-8`;
+            afterBgEl.className = `absolute inset-0 bg-gradient-to-br ${story.afterGrad} flex flex-col justify-center items-center p-8`;
+
+            // Reset slider position
+            beforeBg.style.clipPath = `polygon(0 0, 50% 0, 50% 100%, 0 100%)`;
+            sliderBar.style.left = `50%`;
+
+            // Update text side
+            document.getElementById('story-duration').innerText = story.duration;
+            document.getElementById('story-name').innerText = story.name;
+            document.getElementById('story-achievement').innerText = story.achievement;
+            document.getElementById('story-text').innerText = `"${story.testimonial}"`;
+        }
+
+        // 4. FAQ Toggle Accordion logic
+        function toggleFaq(index) {
+            const content = document.getElementById(`faq-content-${index}`);
+            const arrow = document.getElementById(`faq-arrow-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+
+            // Close other faqs
+            for (let i = 0; i < 4; i++) {
+                if (i !== index) {
+                    document.getElementById(`faq-content-${i}`).classList.add('max-h-0', 'opacity-0');
+                    document.getElementById(`faq-content-${i}`).classList.remove('max-h-[300px]', 'opacity-100');
+                    document.getElementById(`faq-arrow-${i}`).classList.remove('rotate-180', 'text-lime-400');
+                    document.getElementById(`faq-icon-${i}`).className = "p-2 rounded-xl transition-colors bg-zinc-800 text-zinc-400";
+                }
+            }
+
+            // Toggle active faq
+            if (content.classList.contains('max-h-0')) {
+                content.classList.remove('max-h-0', 'opacity-0');
+                content.classList.add('max-h-[300px]', 'opacity-100');
+                arrow.classList.add('rotate-180', 'text-lime-400');
+                icon.className = "p-2 rounded-xl transition-colors bg-lime-400/10 text-lime-400";
+            } else {
+                content.classList.add('max-h-0', 'opacity-0');
+                content.classList.remove('max-h-[300px]', 'opacity-100');
+                arrow.classList.remove('rotate-180', 'text-lime-400');
+                icon.className = "p-2 rounded-xl transition-colors bg-zinc-800 text-zinc-400";
+            }
+        }
+
+        // 5. Contact Form redirect on submit
+        const contactForm = document.getElementById('contact-form');
+        const contactSuccess = document.getElementById('contact-success');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('contact-name').value;
+            const phone = document.getElementById('contact-phone').value;
+            const program = document.getElementById('contact-program').value;
+            const goal = document.getElementById('contact-goal').value;
+
+            const programText = program === 'general' ? 'استفسار عام / باقة مخصصة' : `الاشتراك في باقة: ${program}`;
+
+            const message = `مرحباً كوتش محمد أحمد! أنا ${name} وأود الاستفسار عن تفاصيل الاشتراك وتصميم خطة لـ:
+- هدف رياضي: ${goal}
+- رقم جوالي: ${phone}
+- الباقة المهتم بها: ${programText}`;
+
+            const link = `https://wa.me/201024960221?text=${encodeURIComponent(message)}`;
+            
+            // Show loading toast
+            contactSuccess.classList.remove('hidden');
+
+            // Open WhatsApp in new tab
+            window.open(link, '_blank');
+
+            // Reset after redirect
+            setTimeout(() => {
+                contactSuccess.classList.add('hidden');
+                contactForm.reset();
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
