@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor Mohamed | online coaching</title>
-    
-    <!-- Google Fonts (Cairo) -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS CDN -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -30,14 +28,12 @@
         }
     </script>
 
-    <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
         body {
             font-family: 'Cairo', sans-serif;
         }
-        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -55,16 +51,13 @@
 </head>
 <body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col antialiased">
 
-    <!-- NAVBAR -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-transparent py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <!-- Logo -->
             <a href="#home" class="flex items-center gap-2 text-white font-black text-xl md:text-2xl tracking-wider select-none">
                 <i data-lucide="dumbbell" class="h-6 w-6 md:h-7 md:w-7 text-lime-400 transform -rotate-45"></i>
                 <span>COACH<span class="text-lime-400">.</span>MOHAMED</span>
             </a>
 
-            <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center gap-8">
                 <ul class="flex items-center gap-8 list-none m-0 p-0">
                     <li><a href="#home" class="text-sm font-semibold text-zinc-300 hover:text-lime-400 transition-colors duration-200">الرئيسية</a></li>
@@ -83,13 +76,11 @@
                 </a>
             </div>
 
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-1.5 hover:bg-zinc-900 rounded-md transition-colors">
                 <i data-lucide="menu" class="h-6 w-6"></i>
             </button>
         </div>
 
-        <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-zinc-950 border-b border-zinc-800 transition-all duration-300">
             <ul class="flex flex-col p-6 gap-4 list-none m-0 text-right">
                 <li><a href="#home" class="mobile-nav-link block text-lg font-medium text-zinc-300 hover:text-lime-400 py-2 border-b border-zinc-900">الرئيسية</a></li>
@@ -111,13 +102,11 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section id="home" class="relative min-h-screen flex items-center justify-center pt-28 pb-12 px-4 sm:px-6 lg:px-8 bg-zinc-950 overflow-hidden">
         <div class="absolute top-[-10%] right-[-10%] w-[300px] sm:w-[550px] h-[300px] sm:h-[550px] bg-lime-500/10 rounded-full blur-[90px] pointer-events-none"></div>
         <div class="absolute bottom-[-10%] left-[-10%] w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-emerald-500/5 rounded-full blur-[100px] pointer-events-none"></div>
 
         <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-            <!-- Hero Text -->
             <div class="lg:col-span-7 flex flex-col items-start text-right w-full order-last lg:order-first">
                 <div class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-800 text-lime-400 text-sm font-semibold px-4 py-2 rounded-full mb-6 shadow-sm self-start">
                     <i data-lucide="sparkles" class="h-4 w-4"></i>
@@ -137,7 +126,6 @@
                         احسب مؤشر كتلة جسمك مجاناً
                     </a>
                 </div>
-                <!-- Stats -->
                 <div class="grid grid-cols-3 gap-6 mt-12 w-full max-w-md border-t border-zinc-900 pt-8 text-right">
                     <div>
                         <div class="text-3xl font-extrabold text-lime-400">6+</div>
@@ -154,7 +142,6 @@
                 </div>
             </div>
 
-            <!-- Hero Image -->
             <div class="lg:col-span-5 flex justify-center items-center w-full">
                 <div class="relative w-full max-w-[300px] sm:max-w-[340px] rounded-3xl overflow-hidden border-2 border-zinc-850 bg-zinc-900 shadow-2xl" style="aspect-ratio: 473 / 1024;">
                     <img src="hero.jpg" alt="Coach profile" class="w-full h-full object-cover object-center">
@@ -169,17 +156,14 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
     <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-zinc-900 bg-zinc-950/40 relative">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <!-- Image -->
             <div class="lg:col-span-5 flex justify-center order-last lg:order-first">
                 <div class="relative w-full max-w-[380px] aspect-[4/5] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-lg">
                     <img src="about.jpg" alt="Coach training action" class="w-full h-full object-cover object-center">
                 </div>
             </div>
 
-            <!-- Text Content -->
             <div class="lg:col-span-7 text-right">
                 <span class="text-lime-400 font-bold text-sm tracking-wider uppercase">من هو الكوتش؟</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-6">د/ محمد - طبيب ومدرب لياقة بدنية أونلاين</h2>
@@ -196,7 +180,6 @@
                     </p>
                 </div>
 
-                <!-- Certifications Card -->
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-24 h-24 bg-lime-400/5 rounded-br-full pointer-events-none"></div>
                     <h3 class="text-lg font-bold text-white mb-6 flex items-center justify-end gap-2">
@@ -218,11 +201,9 @@
                         </li>
                     </ul>
 
-                    <!-- Certificate Image Previews -->
                     <div class="mt-6 pt-6 border-t border-zinc-800/80">
                         <span class="text-xs font-bold text-lime-400 tracking-wider uppercase block mb-3 text-right">ACHIEVEMENTS</span>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <!-- Cert 1 -->
                             <div class="relative group cursor-pointer overflow-hidden rounded-2xl border border-zinc-800 hover:border-lime-400/60 bg-zinc-950 transition-all duration-300 hover:shadow-lg hover:shadow-lime-400/10" onclick="openCertModal('cert-nutrition.jpg', 'Diploma in Nutrition for Sports and Exercise - Alison & CPD')">
                                 <div class="aspect-[16/11] overflow-hidden bg-zinc-950">
                                     <img src="cert-nutrition.jpg" alt="Diploma in Nutrition for Sports and Exercise" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
@@ -232,7 +213,6 @@
                                     <span class="block text-[11px] text-lime-400 font-semibold mt-0.5">Alison & CPD Certified 🎓</span>
                                 </div>
                             </div>
-                            <!-- Cert 2 -->
                             <div class="relative group cursor-pointer overflow-hidden rounded-2xl border border-zinc-800 hover:border-lime-400/60 bg-zinc-950 transition-all duration-300 hover:shadow-lg hover:shadow-lime-400/10" onclick="openCertModal('cert-fitness.jpg', 'Certified Fitness Instructor - Alison & CPD')">
                                 <div class="aspect-[16/11] overflow-hidden bg-zinc-950">
                                     <img src="cert-fitness.jpg" alt="Certified as Fitness Instructor" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
@@ -249,7 +229,6 @@
         </div>
     </section>
 
-    <!-- FAQ SECTION -->
     <section id="faq" class="py-24 px-4 sm:px-6 lg:px-8 bg-zinc-950 border-t border-zinc-900">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16">
@@ -259,7 +238,6 @@
             </div>
 
             <div class="space-y-4 text-right">
-                <!-- FAQ Item 1 -->
                 <div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
                     <button onclick="toggleFaq(0)" class="w-full flex items-center justify-between p-5 sm:p-6 text-right focus:outline-none gap-4 flex-row-reverse">
                         <div class="flex items-center gap-3 flex-row-reverse">
@@ -277,7 +255,6 @@
                     </div>
                 </div>
 
-                <!-- FAQ Item 2 -->
                 <div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
                     <button onclick="toggleFaq(1)" class="w-full flex items-center justify-between p-5 sm:p-6 text-right focus:outline-none gap-4 flex-row-reverse">
                         <div class="flex items-center gap-3 flex-row-reverse">
@@ -295,7 +272,6 @@
                     </div>
                 </div>
 
-                <!-- FAQ Item 3 -->
                 <div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
                     <button onclick="toggleFaq(2)" class="w-full flex items-center justify-between p-5 sm:p-6 text-right focus:outline-none gap-4 flex-row-reverse">
                         <div class="flex items-center gap-3 flex-row-reverse">
@@ -313,7 +289,6 @@
                     </div>
                 </div>
 
-                <!-- FAQ Item 4 -->
                 <div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
                     <button onclick="toggleFaq(3)" class="w-full flex items-center justify-between p-5 sm:p-6 text-right focus:outline-none gap-4 flex-row-reverse">
                         <div class="flex items-center gap-3 flex-row-reverse">
@@ -334,7 +309,6 @@
         </div>
     </section>
 
-    <!-- BMI CALCULATOR SECTION -->
     <section id="bmi" class="py-24 px-4 sm:px-6 lg:px-8 bg-zinc-900/40 border-t border-zinc-900 relative">
         <div class="max-w-5xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -344,7 +318,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-                <!-- Calculator Inputs -->
                 <div class="md:col-span-6 bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8">
                     <form id="calculator-form" class="space-y-4 text-right">
                         <div class="grid grid-cols-2 gap-4">
@@ -398,7 +371,6 @@
                     </form>
                 </div>
 
-                <!-- Calculator Outputs -->
                 <div class="md:col-span-6 flex flex-col justify-center items-center h-full">
                     <div id="calc-placeholder" class="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-8 text-center max-w-sm w-full flex flex-col items-center justify-center min-h-[350px]">
                         <div class="w-16 h-16 rounded-2xl bg-zinc-850 flex items-center justify-center mb-4 text-zinc-600">
@@ -429,7 +401,6 @@
                             </div>
                         </div>
 
-                        <!-- Macro distribution -->
                         <div class="space-y-3.5 border-t border-zinc-800 pt-6">
                             <h4 class="text-sm font-bold text-zinc-350">توزيع العناصر الغذائية اليومية (الماكروز):</h4>
                             <div class="grid grid-cols-3 gap-3">
@@ -460,7 +431,6 @@
         </div>
     </section>
 
-    <!-- PROGRAMS SECTION -->
     <section id="programs" class="py-24 px-4 sm:px-6 lg:px-8 bg-zinc-950 relative">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -474,7 +444,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-                <!-- Program 1: شهر واحد -->
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative transition-all duration-300 hover:border-zinc-700">
                     <div>
                         <div class="flex justify-between items-center mb-6">
@@ -521,7 +490,6 @@
                     </div>
                 </div>
 
-                <!-- Program 2: تلات شهور (الأكثر طلباً والأفضل قيمة) -->
                 <div class="bg-zinc-900 border-2 border-lime-400 rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative transition-all duration-300 shadow-xl shadow-lime-400/5">
                     <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-lime-400 text-black font-extrabold text-[10px] sm:text-xs px-4 py-1 rounded-full uppercase tracking-wider shadow-md">
                         الأكثر طلباً والأفضل قيمة ⚡
@@ -571,7 +539,6 @@
                     </div>
                 </div>
 
-                <!-- Program 3: شهرين -->
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative transition-all duration-300 hover:border-zinc-700">
                     <div>
                         <div class="flex justify-between items-center mb-6">
@@ -617,7 +584,6 @@
         </div>
     </section>
 
-    <!-- TESTIMONIALS SECTION -->
     <section id="testimonials" class="py-24 px-4 sm:px-6 lg:px-8 bg-zinc-950 border-t border-zinc-900">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -627,14 +593,12 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- Draggable Slider Container -->
                 <div class="lg:col-span-6 flex flex-col items-center">
                     <h3 class="text-lg font-bold text-zinc-300 mb-4 text-center">اسحب الشريط لمشاهدة الفرق</h3>
                     
                     <div id="slider-box" class="relative w-full max-w-[360px] sm:max-w-[400px] aspect-[3/4] rounded-3xl overflow-hidden border-2 border-zinc-800 cursor-ew-resize select-none shadow-2xl">
                         
-                        <!-- After state (Base) -->
-                        <div id="slider-after-bg" class="absolute inset-0 bg-zinc-950 overflow-hidden">
+                        <div id="slider-after-bg" class="absolute inset-0 z-0 bg-zinc-950 overflow-hidden">
                             <img id="slider-after-img" src="transformation-after.jpg" alt="بعد التحول" class="w-full h-full object-cover object-top select-none pointer-events-none">
                             <div class="absolute bottom-4 right-4 z-10 pointer-events-none">
                                 <span id="slider-after-label" class="bg-lime-400 text-black text-xs font-black px-3.5 py-1.5 rounded-full uppercase shadow-lg flex items-center gap-1">
@@ -644,7 +608,6 @@
                             </div>
                         </div>
 
-                        <!-- Before state (Clipped Overlay) -->
                         <div id="slider-before-bg" class="absolute inset-0 bg-zinc-950 overflow-hidden" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
                             <img id="slider-before-img" src="transformation-before.jpg" alt="قبل البداية" class="w-full h-full object-cover object-top select-none pointer-events-none">
                             <div class="absolute bottom-4 left-4 z-10 pointer-events-none">
@@ -655,7 +618,6 @@
                             </div>
                         </div>
 
-                        <!-- Slider Line -->
                         <div id="slider-bar" class="absolute top-0 bottom-0 w-1 bg-lime-400 pointer-events-none z-30 shadow-[0_0_15px_rgba(163,230,53,0.7)]" style="left: 50%;">
                             <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-lime-400 border-4 border-zinc-950 flex items-center justify-center shadow-xl">
                                 <span class="text-xs text-black font-black">↔</span>
@@ -669,7 +631,6 @@
                     </div>
                 </div>
 
-                <!-- Text review -->
                 <div class="lg:col-span-6 text-right flex flex-col justify-center">
                     <i data-lucide="quote" class="h-12 w-12 text-lime-400 opacity-20 mb-4 self-end"></i>
                     <div class="mb-2">
@@ -697,11 +658,9 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
     <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 bg-zinc-950/60 border-t border-zinc-900 relative">
         <div class="max-w-5xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-stretch">
-                <!-- Info -->
                 <div class="md:col-span-5 text-right flex flex-col justify-between">
                     <div>
                         <span class="text-lime-400 font-bold text-sm tracking-wider uppercase">ابدأ التحول الآن</span>
@@ -746,7 +705,6 @@
                     </div>
                 </div>
 
-                <!-- Form -->
                 <div class="md:col-span-7 bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 relative overflow-hidden flex flex-col justify-between">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-lime-400/5 rounded-bl-full pointer-events-none"></div>
                     <h3 class="text-xl font-bold text-white mb-6 text-right">أرسل استفسارك وسيتواصل معك الكوتش</h3>
@@ -785,7 +743,6 @@
                         </div>
                     </form>
 
-                    <!-- Success toast overlay -->
                     <div id="contact-success" class="hidden absolute inset-0 bg-zinc-900/95 flex flex-col items-center justify-center text-center p-6 transition-all duration-300">
                         <div class="w-16 h-16 bg-lime-400/20 text-lime-400 rounded-full flex items-center justify-center mb-4">
                             <i data-lucide="check" class="h-8 w-8 text-lime-400"></i>
@@ -800,7 +757,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="bg-zinc-950 border-t border-zinc-900 py-12 px-4 sm:px-6 lg:px-8 text-zinc-500 text-sm mt-auto">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row-reverse justify-between items-center gap-6">
             <div class="flex items-center gap-2 text-white font-black text-lg select-none">
@@ -826,12 +782,9 @@
         </div>
     </footer>
 
-    <!-- INTERACTIVE JAVASCRIPT -->
     <script>
-        // Initialize Lucide Icons
         lucide.createIcons();
 
-        // 1. Mobile Menu Toggle
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-nav-link');
@@ -846,7 +799,6 @@
             });
         });
 
-        // Sticky Navbar behavior
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -858,7 +810,6 @@
             }
         });
 
-        // 2. BMI Calculator logic
         const form = document.getElementById('calculator-form');
         const placeholder = document.getElementById('calc-placeholder');
         const results = document.getElementById('calc-results');
@@ -873,11 +824,9 @@
             const activity = parseFloat(document.getElementById('calc-activity').value);
             const goal = document.getElementById('calc-goal').value;
 
-            // Calculations
             const heightInMeters = h / 100;
             const bmi = w / (heightInMeters * heightInMeters);
 
-            // BMR (Mifflin-St Jeor)
             let bmr = 0;
             if (gender === 'male') {
                 bmr = 10 * w + 6.25 * h - 5 * age + 5;
@@ -885,7 +834,6 @@
                 bmr = 10 * w + 6.25 * h - 5 * age - 161;
             }
 
-            // TDEE
             const maintenance = bmr * activity;
             let targetCalories = maintenance;
             if (goal === 'lose') {
@@ -894,21 +842,18 @@
                 targetCalories = maintenance + 400;
             }
 
-            // Macros
             const proteinGrams = Math.round(2.2 * w);
             const fatGrams = Math.round(1.0 * w);
             const proteinCals = proteinGrams * 4;
             const fatCals = fatGrams * 9;
             const carbGrams = Math.max(0, Math.round((targetCalories - (proteinCals + fatCals)) / 4));
 
-            // BMI Status
             let bmiStatus = '';
             if (bmi < 18.5) bmiStatus = 'نقص في الوزن';
             else if (bmi >= 18.5 && bmi < 25) bmiStatus = 'وزن مثالي متناسق';
             else if (bmi >= 25 && bmi < 30) bmiStatus = 'زيادة في الوزن';
             else bmiStatus = 'سمنة';
 
-            // DOM Updates
             document.getElementById('res-bmi').innerText = bmi.toFixed(1);
             document.getElementById('res-bmi-status').innerText = bmiStatus;
             document.getElementById('res-bmr').innerText = Math.round(bmr);
@@ -918,7 +863,6 @@
             document.getElementById('macro-fats').innerText = fatGrams + ' جرام (' + fatCals + ' سعرة)';
             document.getElementById('macro-carbs').innerText = carbGrams + ' جرام (' + (carbGrams * 4) + ' سعرة)';
 
-            // Prepare WhatsApp link
             const whatsappMessage = `مرحباً كوتش محمد أحمد! لقد قمت بحساب سعراتي واحتياجي على حاسبة موقعك المخصص وكانت النتائج كالتالي:
 - الطول: ${h} سم | الوزن: ${w} كجم | العمر: ${age} سنة
 - مؤشر كتلة الجسم BMI: ${bmi.toFixed(1)} (${bmiStatus})
@@ -930,12 +874,10 @@
             const whatsappLink = `https://wa.me/201024960221?text=${encodeURIComponent(whatsappMessage)}`;
             document.getElementById('whatsapp-calc-btn').setAttribute('href', whatsappLink);
 
-            // Show results UI
             placeholder.classList.add('hidden');
             results.classList.remove('hidden');
         });
 
-        // 3. Before/After Testimonials Slider logic
         const sliderBox = document.getElementById('slider-box');
         const beforeBg = document.getElementById('slider-before-bg');
         const sliderBar = document.getElementById('slider-bar');
@@ -950,7 +892,6 @@
             sliderBar.style.left = `${percentage}%`;
         }
 
-        // Mouse Events
         sliderBox.addEventListener('mousedown', (e) => {
             isDragging = true;
             updateSlider(e.clientX);
@@ -965,7 +906,6 @@
             updateSlider(e.clientX);
         });
 
-        // Touch Events (for mobile)
         sliderBox.addEventListener('touchstart', (e) => {
             isDragging = true;
             updateSlider(e.touches[0].clientX);
@@ -980,7 +920,6 @@
             updateSlider(e.touches[0].clientX);
         });
 
-        // Stories data switcher
         const stories = [
             {
                 name: "عبد الله صالح",
@@ -1011,7 +950,6 @@
         function switchStory(index) {
             const story = stories[index];
             
-            // Switch active dot style
             const btn0 = document.getElementById('btn-story-0');
             const btn1 = document.getElementById('btn-story-1');
             if (index === 0) {
@@ -1022,36 +960,30 @@
                 btn1.className = "w-6 h-3 rounded-full bg-lime-400 transition-all";
             }
 
-            // Update content in slider
             document.getElementById('slider-before-label').innerText = story.beforeLabel;
             document.getElementById('slider-after-label').innerText = story.afterLabel;
             document.getElementById('slider-before-icon').innerText = story.beforeIcon;
             document.getElementById('slider-after-icon').innerText = story.afterIcon;
             
-            // Update gradients
             const beforeBgEl = document.getElementById('slider-before-bg');
             const afterBgEl = document.getElementById('slider-after-bg');
             beforeBgEl.className = `absolute inset-0 bg-gradient-to-br ${story.beforeGrad} flex flex-col justify-center items-center p-8`;
             afterBgEl.className = `absolute inset-0 bg-gradient-to-br ${story.afterGrad} flex flex-col justify-center items-center p-8`;
 
-            // Reset slider position
             beforeBg.style.clipPath = `polygon(0 0, 50% 0, 50% 100%, 0 100%)`;
             sliderBar.style.left = `50%`;
 
-            // Update text side
             document.getElementById('story-duration').innerText = story.duration;
             document.getElementById('story-name').innerText = story.name;
             document.getElementById('story-achievement').innerText = story.achievement;
             document.getElementById('story-text').innerText = `"${story.testimonial}"`;
         }
 
-        // 4. FAQ Toggle Accordion logic
         function toggleFaq(index) {
             const content = document.getElementById(`faq-content-${index}`);
             const arrow = document.getElementById(`faq-arrow-${index}`);
             const icon = document.getElementById(`faq-icon-${index}`);
 
-            // Close other faqs
             for (let i = 0; i < 4; i++) {
                 if (i !== index) {
                     document.getElementById(`faq-content-${i}`).classList.add('max-h-0', 'opacity-0');
@@ -1061,7 +993,6 @@
                 }
             }
 
-            // Toggle active faq
             if (content.classList.contains('max-h-0')) {
                 content.classList.remove('max-h-0', 'opacity-0');
                 content.classList.add('max-h-[300px]', 'opacity-100');
@@ -1075,7 +1006,6 @@
             }
         }
 
-        // 5. Contact Form redirect on submit
         const contactForm = document.getElementById('contact-form');
         const contactSuccess = document.getElementById('contact-success');
 
@@ -1096,20 +1026,16 @@
 
             const link = `https://wa.me/201024960221?text=${encodeURIComponent(message)}`;
             
-            // Show loading toast
             contactSuccess.classList.remove('hidden');
 
-            // Open WhatsApp in new tab
             window.open(link, '_blank');
 
-            // Reset after redirect
             setTimeout(() => {
                 contactSuccess.classList.add('hidden');
                 contactForm.reset();
             }, 4000);
         });
     </script>
-    <!-- CERTIFICATE MODAL -->
     <div id="cert-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 transition-all duration-300">
         <div class="relative max-w-3xl w-full bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col">
             <div class="flex justify-between items-center p-4 border-b border-zinc-800 flex-row-reverse">
