@@ -601,7 +601,7 @@
                         <div id="slider-after-bg" class="absolute inset-0 z-0 bg-zinc-950 overflow-hidden">
                             <img id="slider-after-img" src="transformation-after.jpg" alt="بعد التحول" class="w-full h-full object-cover object-top select-none pointer-events-none">
                             <div class="absolute bottom-4 right-4 z-10 pointer-events-none">
-                                <span id="slider-after-label" class="bg-lime-400 text-black text-xs font-black px-3.5 py-1.5 rounded-full uppercase shadow-lg flex items-center gap-1">
+                                <span id="slider-after-label" class="bg-lime-400 text-black text-xs font-black px-3.5 py-1.5 rounded-full uppercase shadow-lg flex items-center gap-1 transition-opacity duration-200">
                                     <span>⚡</span>
                                     <span>بعد: 78 كجم (عضل صافي)</span>
                                 </span>
@@ -890,6 +890,11 @@
             const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
             beforeBg.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
             sliderBar.style.left = `${percentage}%`;
+
+            const afterLabel = document.getElementById('slider-after-label');
+            const barX = rect.left + (rect.width * percentage) / 100;
+            const labelRect = afterLabel.getBoundingClientRect();
+            afterLabel.style.opacity = barX >= labelRect.left ? '0' : '1';
         }
 
         sliderBox.addEventListener('mousedown', (e) => {
