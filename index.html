@@ -596,7 +596,7 @@
                 <div class="lg:col-span-6 flex flex-col items-center">
                     <h3 class="text-lg font-bold text-zinc-300 mb-4 text-center">اسحب الشريط لمشاهدة الفرق</h3>
                     
-                    <div id="slider-box" class="relative w-full max-w-[360px] sm:max-w-[400px] aspect-[3/4] rounded-3xl overflow-hidden border-2 border-zinc-800 cursor-ew-resize select-none shadow-2xl">
+                    <div id="slider-box" class="relative w-full max-w-[360px] sm:max-w-[400px] aspect-[3/4] rounded-3xl overflow-hidden border-2 border-zinc-800 cursor-ew-resize select-none touch-pan-y shadow-2xl">
                         
                         <div id="slider-after-bg" class="absolute inset-0 z-0 bg-zinc-950 overflow-hidden">
                             <img id="slider-after-img" src="transformation-after.jpg" alt="بعد التحول" class="w-full h-full object-cover object-top select-none pointer-events-none">
@@ -608,7 +608,7 @@
                             </div>
                         </div>
 
-                        <div id="slider-before-bg" class="absolute inset-0 bg-zinc-950 overflow-hidden" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                        <div id="slider-before-bg" class="absolute inset-0 bg-zinc-950 overflow-hidden" style="clip-path: inset(0 50% 0 0); will-change: clip-path;">
                             <img id="slider-before-img" src="transformation-before.jpg" alt="قبل البداية" class="w-full h-full object-cover object-top select-none pointer-events-none">
                             <div class="absolute bottom-4 left-4 z-10 pointer-events-none">
                                 <span id="slider-before-label" class="bg-zinc-900/90 text-white border border-zinc-700 text-xs font-black px-3.5 py-1.5 rounded-full uppercase shadow-lg flex items-center gap-1">
@@ -618,11 +618,7 @@
                             </div>
                         </div>
 
-                        <div id="slider-bar" class="absolute top-0 bottom-0 w-1 bg-lime-400 pointer-events-none z-30 shadow-[0_0_15px_rgba(163,230,53,0.7)]" style="left: 50%;">
-                            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-lime-400 border-4 border-zinc-950 flex items-center justify-center shadow-xl">
-                                <span class="text-xs text-black font-black">↔</span>
-                            </div>
-                        </div>
+                        <div id="slider-bar" class="absolute top-0 bottom-0 w-1 bg-lime-400 pointer-events-none z-30" style="left: 50%;"></div>
                     </div>
 
                     <div class="mt-4 flex items-center gap-2 text-zinc-400 text-xs">
@@ -883,47 +879,54 @@
         const sliderBar = document.getElementById('slider-bar');
 
         let isDragging = false;
+        let boxRect = null;
+        let labelLeft = 0;
+        let pendingX = 0;
+        let ticking = false;
+        let labelHidden = false;
+        const afterLabel = document.getElementById('slider-after-label');
 
-        function updateSlider(clientX) {
-            const rect = sliderBox.getBoundingClientRect();
-            const x = clientX - rect.left;
-            const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
-            beforeBg.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
-            sliderBar.style.left = `${percentage}%`;
-
-            const afterLabel = document.getElementById('slider-after-label');
-            const barX = rect.left + (rect.width * percentage) / 100;
-            const labelRect = afterLabel.getBoundingClientRect();
-            afterLabel.style.opacity = barX >= labelRect.left ? '0' : '1';
+        function cacheRects() {
+            boxRect = sliderBox.getBoundingClientRect();
+            labelLeft = afterLabel.getBoundingClientRect().left;
         }
 
-        sliderBox.addEventListener('mousedown', (e) => {
+        function render() {
+            ticking = false;
+            const percentage = Math.max(0, Math.min(100, ((pendingX - boxRect.left) / boxRect.width) * 100));
+            beforeBg.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+            sliderBar.style.left = `${percentage}%`;
+
+            const hide = (boxRect.left + (boxRect.width * percentage) / 100) >= labelLeft;
+            if (hide !== labelHidden) {
+                labelHidden = hide;
+                afterLabel.style.opacity = hide ? '0' : '1';
+            }
+        }
+
+        function moveSlider(clientX) {
+            pendingX = clientX;
+            if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(render);
+            }
+        }
+
+        sliderBox.addEventListener('pointerdown', (e) => {
             isDragging = true;
-            updateSlider(e.clientX);
+            cacheRects();
+            sliderBox.setPointerCapture(e.pointerId);
+            moveSlider(e.clientX);
         });
 
-        window.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
-
-        sliderBox.addEventListener('mousemove', (e) => {
+        sliderBox.addEventListener('pointermove', (e) => {
             if (!isDragging) return;
-            updateSlider(e.clientX);
+            moveSlider(e.clientX);
         });
 
-        sliderBox.addEventListener('touchstart', (e) => {
-            isDragging = true;
-            updateSlider(e.touches[0].clientX);
-        });
-
-        window.addEventListener('touchend', () => {
-            isDragging = false;
-        });
-
-        sliderBox.addEventListener('touchmove', (e) => {
-            if (!isDragging) return;
-            updateSlider(e.touches[0].clientX);
-        });
+        const stopDrag = () => { isDragging = false; };
+        sliderBox.addEventListener('pointerup', stopDrag);
+        sliderBox.addEventListener('pointercancel', stopDrag);
 
         const stories = [
             {
@@ -975,7 +978,7 @@
             beforeBgEl.className = `absolute inset-0 bg-gradient-to-br ${story.beforeGrad} flex flex-col justify-center items-center p-8`;
             afterBgEl.className = `absolute inset-0 bg-gradient-to-br ${story.afterGrad} flex flex-col justify-center items-center p-8`;
 
-            beforeBg.style.clipPath = `polygon(0 0, 50% 0, 50% 100%, 0 100%)`;
+            beforeBg.style.clipPath = `inset(0 50% 0 0)`;
             sliderBar.style.left = `50%`;
 
             document.getElementById('story-duration').innerText = story.duration;
